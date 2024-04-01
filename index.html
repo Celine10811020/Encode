@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+
+	<script src="declare.js"></script>
+	<script>
+		password = prompt('輸入密碼：','');
+
+		outputString = "";
+
+		for(var i=0; i<password.length; i++)
+		{
+			char = password.substring(i, i+1)
+			index = refStr.indexOf(char)
+			newIndex = index^1;
+			outputString += refStr.substring(newIndex, newIndex+1);
+		}
+
+		if(outputString != null)
+		{
+			location.href= outputString + ".html";
+		}
+	</script>
+</html>
